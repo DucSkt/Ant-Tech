@@ -5,7 +5,7 @@ class ItemButton extends Component {
 
   render() {
     return (
-        <TouchableOpacity >
+        <TouchableOpacity onPress={this.props.onPress} >
          <Image style={Styles.image} source={this.props.Image} />
         </TouchableOpacity>
     );
