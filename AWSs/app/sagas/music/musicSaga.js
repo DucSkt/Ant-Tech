@@ -9,6 +9,7 @@ function* fetMusicApi() {
     yield put(fetchMusicApiSucess(data));
 }
 
-export function* watchFetchLanguage() {
+export function* watchFetMusic() {
   yield takeLatest(FETCH_MUSIC, fetMusicApi);
 }
+ 
