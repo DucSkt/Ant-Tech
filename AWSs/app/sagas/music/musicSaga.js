@@ -6,7 +6,10 @@ import { takeEvery, takeLatest, put, call } from 'redux-saga/effects';
 function* fetMusicApi() {
     const data = yield call(Data);
     if(data)
-    yield put(fetchMusicApiSucess(data));
+    {
+      yield put(fetchMusicApiSucess(data));
+    }
+    
 }
 
 export function* watchFetMusic() {

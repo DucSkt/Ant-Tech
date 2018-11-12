@@ -2,16 +2,16 @@ import React, { Component } from 'react'
 import { Text, View , Image} from 'react-native'
 import {Images} from '../../../../themes';
 import Styles from './Styles';
-export class componentName extends Component {
+export class Song extends Component {
   render() {
     return (
       <View style={Styles.container} >
-          <Image style={Styles.image} source={Images.songs} />
-          <Text style={Styles.textTitle1}>Haong VAnssssssssss DUaasdsa</Text>
-          <Text style={ Styles.textTitle2}>Haong VAn DUaasdsa</Text>
+          <Image style={Styles.image} source={{uri :this.props.data.cover }} />
+          <Text style={Styles.textTitle1}>{this.props.data.title}</Text>
+          <Text style={ Styles.textTitle2}>{this.props.data.artist}</Text>
       </View>
     )
   }
 }
 
-export default componentName
+export default Song
