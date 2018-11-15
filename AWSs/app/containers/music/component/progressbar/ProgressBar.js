@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text ,Dimensions } from 'react-native';
 import Styles from './Styles';
+import RowView from './RowView';
 class ProgressBar extends Component {
 
    static defaultProps = {
     data:'0:00'
    }
-  render() {
+  render() { 
     const {data} = this.props
     return (
-      <View style={Styles.container}>
-        <View style={ Styles.viewAll}>
-          <View style={Styles.durationLeft}>
-            <Text>{data}:00</Text>
-          </View>
-          <View style={Styles.durationRight}>
-            <Text>0:00</Text>
-          </View>
-        </View>
+      <View>
+        <RowView justifyContent="space-between">
+            <Text style={Styles.durationLeft}>0:00</Text>                
+            <Text style={Styles.durationRight}>{data}:0</Text>
+            </RowView>
         <View style={Styles.progress}>
         </View>
       </View>

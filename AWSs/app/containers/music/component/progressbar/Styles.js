@@ -12,19 +12,14 @@ export default StyleSheet.create({
         height: 25,
         flexDirection: 'row'
     },
-    durationLeft: {
-        position: 'absolute',
-        top: 0,
-        bottom: 0,
-        left: width / 3 + 10
-    },
-    durationRight: {
-        position: 'absolute',
-        top: 0,
-        bottom: 0,
-        right: width / 3 + 15
+    durationLeft:{ 
+        marginLeft: (width - (width * 9 / 10))/3}
+    ,
+    durationRight: { 
+        marginRight: (width - (width * 9 / 10))/3
     },
     progress: {
+        alignSelf:'center',
         height: 0.9,
         width: width * 9 / 10,
         backgroundColor: 'gray'
